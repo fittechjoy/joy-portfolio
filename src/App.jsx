@@ -2,36 +2,81 @@ function App() {
   return (
     <div className="min-h-screen bg-black text-white">
 
-      {/* HERO */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <p className="text-cyan-400 uppercase tracking-widest text-sm mb-4">
-          Front-End Developer
-        </p>
+  {/* NAVBAR */}
+<header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md">
+  <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <div className="text-lg font-bold text-cyan-400">
+      Joy
+    </div>
 
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-          Hi, I’m <span className="text-cyan-400">Joy Kiama</span>
-        </h1>
+    <nav className="hidden md:flex gap-6 text-sm text-gray-200">
+      <a href="#home" className="hover:text-cyan-400 transition">Home</a>
+      <a href="#about" className="hover:text-cyan-400 transition">About</a>
+      <a href="#projects" className="hover:text-cyan-400 transition">Projects</a>
+      <a href="#skills" className="hover:text-cyan-400 transition">Skills</a>
+      <a href="#services" className="hover:text-cyan-400 transition">Services</a>
+      <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
+    </nav>
+  </div>
+</header>
 
-        <p className="text-gray-200 text-lg max-w-2xl mb-10 leading-relaxed">
-          I build clean, modern, and user-focused web interfaces using React and modern frontend tools.
-        </p>
+{/* HERO */}
+<section
+  id="home"
+  className="min-h-screen flex items-center justify-center text-center px-6
+             bg-gradient-to-b from-black via-gray-900 to-black"
+>
+  <div className="max-w-3xl pt-20">
+    <p className="text-cyan-400 uppercase tracking-widest text-sm mb-4">
+      Front-End Developer
+    </p>
 
-        <div className="flex gap-4">
-          <a
-            href="#projects"
-            className="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-lg hover:bg-cyan-300 transition"
-          >
-            View Projects
-          </a>
+    <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+      Joy <span className="text-cyan-400">Kiama</span>
+    </h1>
 
-          <a
-            href="#contact"
-            className="px-6 py-3 border border-gray-400 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition"
-          >
-            Contact Me
-          </a>
-        </div>
-      </section>
+    <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+      I build clean, modern, and user-focused web interfaces using React and modern frontend tools.
+    </p>
+
+    <div className="flex justify-center gap-4">
+      <a
+        href="#projects"
+        className="px-7 py-3 rounded-lg bg-cyan-400 text-black font-semibold
+                   hover:bg-cyan-300 transition"
+      >
+        View My Work
+      </a>
+
+      <a
+        href="#contact"
+        className="px-7 py-3 rounded-lg border border-cyan-400 text-cyan-400
+                   hover:bg-cyan-400 hover:text-black transition"
+      >
+        Get In Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+
+{/* ABOUT */}
+<section id="about" className="py-24 px-6 bg-black">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-4xl font-bold mb-8">
+      About <span className="text-cyan-400">Me</span>
+    </h2>
+
+    <p className="text-gray-300 text-lg leading-relaxed">
+      I’m a front-end developer with a strong focus on building clean,
+      responsive, and accessible web interfaces. My journey into tech
+      is rooted in discipline, consistency, and continuous learning.
+      I enjoy turning ideas and designs into functional, user-friendly
+      digital experiences.
+    </p>
+  </div>
+</section>
+
 
       {/* PROJECTS */}
       <section id="projects" className="py-24 px-6 bg-gray-900">
