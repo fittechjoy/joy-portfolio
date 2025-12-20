@@ -41,22 +41,29 @@ function App() {
 
         <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-3">
           <ProjectCard
-            title="Momentum Tracker App"
-            description="A productivity app focused on consistency and daily progress."
-            tech="React • Tailwind"
-          />
+  title="Momentum Tracker App"
+  description="A productivity app focused on consistency and daily progress."
+  tech="React • Tailwind"
+  github="https://github.com/fittechjoy/momentum-tracker"
+  live=""
+/>
 
-          <ProjectCard
-            title="GitHub User Search"
-            description="Search GitHub users using the GitHub API with a clean UI."
-            tech="React • API"
-          />
+<ProjectCard
+  title="GitHub User Search"
+  description="Search GitHub users using the GitHub API with a clean UI."
+  tech="React • API"
+  github="https://github.com/fittechjoy/github-user-search"
+  live=""
+/>
 
-          <ProjectCard
-            title="EHR System"
-            description="A team-based healthcare system UI for managing patient records."
-            tech="React • Team Project"
-          />
+<ProjectCard
+  title="EHR System"
+  description="A team-based healthcare system UI for managing patient records."
+  tech="React • Team Project"
+  github="https://github.com/fittechjoy/your-ehr-repo"
+  live=""
+/>
+
         </div>
       </section>
 
@@ -71,7 +78,7 @@ function App() {
         </p>
 
         <a
-          href="mailto:your-email@example.com"
+          href="mailto:kiama01joy@gmail.com"
           className="inline-block px-8 py-4 bg-cyan-400 text-black font-semibold rounded-lg hover:bg-cyan-300 transition"
         >
           Get in Touch
@@ -82,14 +89,45 @@ function App() {
   );
 }
 
-function ProjectCard({ title, description, tech }) {
+function ProjectCard({ title, description, tech, github, live }) {
   return (
     <div className="bg-black border border-gray-700 rounded-lg p-6 hover:border-cyan-400 hover:-translate-y-1 transition">
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-300 mb-4">{description}</p>
-      <p className="text-cyan-400 text-sm">{tech}</p>
+
+      <p className="text-gray-300 mb-4">
+        {description}
+      </p>
+
+      <p className="text-cyan-400 text-sm mb-6">
+        {tech}
+      </p>
+
+      <div className="flex gap-4 text-sm">
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-cyan-400 transition underline underline-offset-4"
+          >
+            GitHub
+          </a>
+        )}
+
+        {live && (
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-cyan-400 transition underline underline-offset-4"
+          >
+            Live Demo
+          </a>
+        )}
+      </div>
     </div>
   );
 }
+
 
 export default App;
