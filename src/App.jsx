@@ -1,4 +1,37 @@
+import { useEffect } from "react";
+
 function App() {
+  useEffect(() => {
+  const elements = document.querySelectorAll(".fade-in");
+
+  if (!("IntersectionObserver" in window)) {
+    // Fallback: show everything
+    elements.forEach(el => el.classList.add("show"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "0px 0px -100px 0px",
+      threshold: 0
+    }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
+
+
   return (
     <div className="min-h-screen bg-black text-white">
 
@@ -215,11 +248,12 @@ function App() {
 
 function ProjectCard({ title, description, tech, github }) {
   return (
-    <div
-  className="bg-black border border-gray-700 rounded-lg p-6
+  <div
+  className="fade-in bg-black border border-gray-700 rounded-lg p-6
              transition transform duration-300 ease-out
              hover:-translate-y-2 hover:border-cyan-400 hover:shadow-xl"
 >
+
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-gray-300 mb-4">{description}</p>
       <p className="text-cyan-400 text-sm mb-4">{tech}</p>
