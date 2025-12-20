@@ -1,16 +1,39 @@
-# React + Vite
+# Joy Kiama — Front-End Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal **front-end developer portfolio**, built to showcase my projects, skills, and services with a clean, modern, and user-focused design.
 
-Currently, two official plugins are available:
+The portfolio highlights real-world applications, thoughtful UI decisions, and my approach to building responsive, accessible web interfaces.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## 🌐 Live Website
+👉 https://joy-portfolio-eta.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## ✨ Overview
+This portfolio serves as a central hub for:
+- Selected front-end projects
+- Skills and tools I work with
+- Services I offer
+- Ways to get in touch for collaboration or work opportunities
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+It is designed with simplicity, clarity, and performance in mind.
+
+
+## 🛠 Tech Stack
+- **React**
+- **Tailwind CSS**
+- **JavaScript (ES6+)**
+- **Vite**
+
+
+## 🎯 Key Features
+- Modern dark UI with subtle animations
+- Fully responsive design (mobile-first)
+- Clean component-based architecture
+- Deployed on Vercel
+- Optimized for SEO and social sharing
+
+
+
+## 📄 License
+This project is intended for personal and professional showcase purposes.
