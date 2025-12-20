@@ -123,6 +123,59 @@ function App() {
   </div>
 </section>
 
+{/* SERVICES */}
+<section id="services" className="py-24 px-6 bg-gray-900">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-4xl font-bold text-center mb-14">
+      Services I <span className="text-cyan-400">Offer</span>
+    </h2>
+
+    <div className="grid gap-10 md:grid-cols-3">
+
+      {/* Service 1 */}
+      <div className="bg-black border border-gray-700 rounded-lg p-6 hover:border-cyan-400 transition">
+        <h3 className="text-xl font-semibold mb-3 text-white">
+          Front-End Development
+        </h3>
+        <p className="text-gray-300 mb-4">
+          Building clean, responsive, and modern user interfaces using React and modern frontend tools.
+        </p>
+        <p className="text-cyan-400 text-sm">
+          React • Tailwind • JavaScript
+        </p>
+      </div>
+
+      {/* Service 2 */}
+      <div className="bg-black border border-gray-700 rounded-lg p-6 hover:border-cyan-400 transition">
+        <h3 className="text-xl font-semibold mb-3 text-white">
+          UI Implementation
+        </h3>
+        <p className="text-gray-300 mb-4">
+          Converting Figma designs into pixel-perfect, accessible, and responsive web pages.
+        </p>
+        <p className="text-cyan-400 text-sm">
+          Figma • HTML • CSS • Tailwind
+        </p>
+      </div>
+
+      {/* Service 3 */}
+      <div className="bg-black border border-gray-700 rounded-lg p-6 hover:border-cyan-400 transition">
+        <h3 className="text-xl font-semibold mb-3 text-white">
+          Website Improvements & Fixes
+        </h3>
+        <p className="text-gray-300 mb-4">
+          Fixing layout issues, improving responsiveness, and refining existing front-end code.
+        </p>
+        <p className="text-cyan-400 text-sm">
+          Bug Fixes • Refactors • Performance
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
       {/* CONTACT */}
       <section id="contact" className="py-20 px-6 text-center">
