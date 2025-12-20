@@ -67,6 +67,63 @@ function App() {
         </div>
       </section>
 
+      {/* SKILLS */}
+<section id="skills" className="py-24 px-6 bg-black">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-4xl font-bold text-center mb-14">
+      Skills & <span className="text-cyan-400">Tools</span>
+    </h2>
+
+    <div className="grid gap-10 md:grid-cols-3">
+
+      {/* Frontend */}
+      <div className="border border-gray-700 rounded-lg p-6">
+        <h3 className="text-xl font-semibold mb-4 text-cyan-400">
+          Frontend
+        </h3>
+        <ul className="space-y-2 text-gray-200">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>React</li>
+          <li>Tailwind CSS</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+
+      {/* Tools */}
+      <div className="border border-gray-700 rounded-lg p-6">
+        <h3 className="text-xl font-semibold mb-4 text-cyan-400">
+          Tools
+        </h3>
+        <ul className="space-y-2 text-gray-200">
+          <li>Git & GitHub</li>
+          <li>Vite</li>
+          <li>Figma (UI Implementation)</li>
+          <li>VS Code</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+
+      {/* Soft Skills */}
+      <div className="border border-gray-700 rounded-lg p-6">
+        <h3 className="text-xl font-semibold mb-4 text-cyan-400">
+          Soft Skills
+        </h3>
+        <ul className="space-y-2 text-gray-200">
+          <li>Problem Solving</li>
+          <li>Attention to Detail</li>
+          <li>Communication</li>
+          <li>Time Management</li>
+          <li>Team Collaboration</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
       {/* CONTACT */}
       <section id="contact" className="py-20 px-6 text-center">
         <h2 className="text-4xl font-bold mb-6">
