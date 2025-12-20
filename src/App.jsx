@@ -117,11 +117,13 @@ function App() {
 
         <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-3">
           <ProjectCard
-            title="Momentum Tracker App"
-            description="A productivity app focused on consistency and daily progress."
-            tech="React • Tailwind"
-            github="https://github.com/fittechjoy/momentum-tracker"
-          />
+  title="Momentum Tracker App"
+  description="A productivity app focused on consistency and daily progress."
+  tech="React • Tailwind"
+  github="https://github.com/fittechjoy/momentum-tracker"
+  live="https://momentum-tracker-git-main-joys-projects-e57c4def.vercel.app/"
+/>
+
 
           <ProjectCard
             title="GitHub User Search"
@@ -134,6 +136,7 @@ function App() {
             title="EHR System"
             description="A team-based healthcare system UI for managing patient records."
             tech="React • Team Project"
+            noFade
           />
         </div>
       </section>
@@ -246,25 +249,46 @@ function App() {
 
 /* ---------- COMPONENTS ---------- */
 
-function ProjectCard({ title, description, tech, github }) {
+function ProjectCard({ title, description, tech, github, live, noFade }) {
   return (
-  <div
-  className="fade-in bg-black border border-gray-700 rounded-lg p-6
-             transition transform duration-300 ease-out
-             hover:-translate-y-2 hover:border-cyan-400 hover:shadow-xl"
->
-
+    <div
+      className={`${noFade ? "" : "fade-in"} bg-black border border-gray-700 rounded-lg p-6
+                  transition transform duration-300 ease-out
+                  hover:-translate-y-2 hover:border-cyan-400 hover:shadow-xl`}
+    >
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
+
       <p className="text-gray-300 mb-4">{description}</p>
-      <p className="text-cyan-400 text-sm mb-4">{tech}</p>
-      {github && (
-        <a href={github} target="_blank" rel="noopener noreferrer" className="underline">
-          GitHub
-        </a>
-      )}
+
+      <p className="text-cyan-400 text-sm mb-6">{tech}</p>
+
+      <div className="flex gap-4 text-sm">
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 underline underline-offset-4 transition"
+          >
+            GitHub
+          </a>
+        )}
+
+        {live && (
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 underline underline-offset-4 transition"
+          >
+            Live App
+          </a>
+        )}
+      </div>
     </div>
   );
 }
+
 
 function SkillBox({ title, items }) {
   return (
