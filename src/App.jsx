@@ -56,7 +56,7 @@ function App() {
       {/* HERO */}
   <section
   id="home"
-  className="min-h-screen flex items-center justify-center text-center px-6
+  className="min-h-[90vh] flex items-center justify-center text-center px-6
              bg-gradient-to-b from-black via-gray-900 to-black
              animate-fadeIn"
 >
