@@ -12,23 +12,30 @@ function App() {
           Hi, I’m <span className="text-cyan-400">Joy Kiama</span>
         </h1>
 
-        <p className="text-white text-lg max-w-2xl mb-8">
+        <p className="text-gray-200 text-lg max-w-2xl mb-10 leading-relaxed">
           I build clean, modern, and user-focused web interfaces using React and modern frontend tools.
         </p>
 
         <div className="flex gap-4">
-          <button className="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-lg">
+          <a
+            href="#projects"
+            className="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-lg hover:bg-cyan-300 transition"
+          >
             View Projects
-          </button>
-          <button className="px-6 py-3 border border-white rounded-lg">
+          </a>
+
+          <a
+            href="#contact"
+            className="px-6 py-3 border border-gray-400 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition"
+          >
             Contact Me
-          </button>
+          </a>
         </div>
       </section>
 
       {/* PROJECTS */}
-      <section className="py-20 px-6 bg-gray-900">
-        <h2 className="text-4xl font-bold text-center mb-12">
+      <section id="projects" className="py-24 px-6 bg-gray-900">
+        <h2 className="text-4xl font-bold text-center mb-14">
           Selected <span className="text-cyan-400">Projects</span>
         </h2>
 
@@ -38,11 +45,13 @@ function App() {
             description="A productivity app focused on consistency and daily progress."
             tech="React • Tailwind"
           />
+
           <ProjectCard
             title="GitHub User Search"
             description="Search GitHub users using the GitHub API with a clean UI."
             tech="React • API"
           />
+
           <ProjectCard
             title="EHR System"
             description="A team-based healthcare system UI for managing patient records."
@@ -51,15 +60,33 @@ function App() {
         </div>
       </section>
 
+      {/* CONTACT */}
+      <section id="contact" className="py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-6">
+          Let’s <span className="text-cyan-400">Work Together</span>
+        </h2>
+
+        <p className="text-gray-300 max-w-xl mx-auto mb-8">
+          I’m open to remote roles, freelance projects, and collaborations.
+        </p>
+
+        <a
+          href="mailto:your-email@example.com"
+          className="inline-block px-8 py-4 bg-cyan-400 text-black font-semibold rounded-lg hover:bg-cyan-300 transition"
+        >
+          Get in Touch
+        </a>
+      </section>
+
     </div>
   );
 }
 
 function ProjectCard({ title, description, tech }) {
   return (
-    <div className="bg-black border border-gray-700 rounded-lg p-6">
+    <div className="bg-black border border-gray-700 rounded-lg p-6 hover:border-cyan-400 hover:-translate-y-1 transition">
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-200 mb-4">{description}</p>
+      <p className="text-gray-300 mb-4">{description}</p>
       <p className="text-cyan-400 text-sm">{tech}</p>
     </div>
   );
