@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+import momentumImg from "./assets/images/momentum.png";
+import taskflowImg from "./assets/images/taskflow.png";
+
 
 function App() {
   useEffect(() => {
@@ -103,8 +106,8 @@ function App() {
 
           <p className="text-gray-300 text-lg leading-relaxed">
             I’m a front-end developer with a strong focus on building clean,
-            responsive, and accessible web interfaces. My journey into tech
-            is rooted in discipline, consistency, and continuous learning.
+            responsive, and accessible web interfaces. I enjoy turning ideas into functional digital products using React and modern front-end tools.
+             My journey into tech is rooted in discipline, consistency, and continuous learning. 
           </p>
         </div>
       </section>
@@ -116,29 +119,40 @@ function App() {
         </h2>
 
         <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-3">
-          <ProjectCard
-  title="Momentum Tracker App"
-  description="A productivity app focused on consistency and daily progress."
-  tech="React • Tailwind"
-  github="https://github.com/fittechjoy/momentum-tracker"
-  live="https://momentum-tracker-git-main-joys-projects-e57c4def.vercel.app/"
-/>
 
+  <ProjectCard
+    title="Momentum Tracker App"
+    description="A productivity app focused on consistency and daily progress."
+    tech="React • Tailwind • API"
+    github="https://github.com/fittechjoy/momentum-tracker"
+    live="https://momentumtracker.vercel.app/"
+    image={momentumImg}
+  />
 
-          <ProjectCard
-            title="GitHub User Search"
-            description="Search GitHub users using the GitHub API with a clean UI."
-            tech="React • API"
-            github="https://github.com/fittechjoy/github-user-search"
-          />
+  <ProjectCard
+    title="GitHub User Search"
+    description="Search GitHub users using the GitHub API with a clean UI."
+    tech="React • API"
+    github="https://github.com/fittechjoy/github-user-search"
+  />
 
-          <ProjectCard
-            title="EHR System"
-            description="A team-based healthcare system UI for managing patient records."
-            tech="React • Team Project"
-            noFade
-          />
-        </div>
+  <ProjectCard
+    title="EHR System"
+    description="A team-based healthcare system UI for managing patient records."
+    tech="React • Team Project"
+    noFade
+  />
+
+  <ProjectCard
+    title="TaskFlow"
+    description="A clean, minimal task manager focused on productivity and momentum. Users can add, complete, delete, and filter tasks with data persisted in localStorage."
+    tech="React • Tailwind CSS • Local Storage"
+    github="https://github.com/fittechjoy/taskflow"
+    image={taskflowImg}
+  />
+
+</div>
+
       </section>
 
       {/* SKILLS */}
@@ -249,45 +263,59 @@ function App() {
 
 /* ---------- COMPONENTS ---------- */
 
-function ProjectCard({ title, description, tech, github, live, noFade }) {
+function ProjectCard({ title, description, tech, github, live, image, noFade }) {
   return (
     <div
-      className={`${noFade ? "" : "fade-in"} bg-black border border-gray-700 rounded-lg p-6
+      className={`${noFade ? "" : "fade-in"} bg-black border border-gray-700 rounded-lg overflow-hidden
                   transition transform duration-300 ease-out
                   hover:-translate-y-2 hover:border-cyan-400 hover:shadow-xl`}
     >
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
+      {/* IMAGE */}
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-40 object-cover"
+          loading="lazy"
+        />
+      )}
 
-      <p className="text-gray-300 mb-4">{description}</p>
+      {/* CONTENT */}
+      <div className="p-6">
+        <h3 className="text-xl font-semibold mb-3">{title}</h3>
 
-      <p className="text-cyan-400 text-sm mb-6">{tech}</p>
+        <p className="text-gray-300 mb-4">{description}</p>
 
-      <div className="flex gap-4 text-sm">
-        {github && (
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 underline underline-offset-4 transition"
-          >
-            GitHub
-          </a>
-        )}
+        <p className="text-cyan-400 text-sm mb-6">{tech}</p>
 
-        {live && (
-          <a
-            href={live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 underline underline-offset-4 transition"
-          >
-            Live App
-          </a>
-        )}
+        <div className="flex gap-4 text-sm">
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 underline underline-offset-4 transition"
+            >
+              GitHub
+            </a>
+          )}
+
+          {live && (
+            <a
+              href={live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 underline underline-offset-4 transition"
+            >
+              Live App
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
 }
+
 
 
 function SkillBox({ title, items }) {
