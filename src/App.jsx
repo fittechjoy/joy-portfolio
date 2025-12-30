@@ -148,6 +148,7 @@ function App() {
     description="A clean, minimal task manager focused on productivity and momentum. Users can add, complete, delete, and filter tasks with data persisted in localStorage."
     tech="React • Tailwind CSS • Local Storage"
     github="https://github.com/fittechjoy/taskflow"
+    live="https://taskflow-gamma-nine.vercel.app/"
     image={taskflowImg}
   />
 
