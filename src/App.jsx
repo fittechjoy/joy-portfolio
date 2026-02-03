@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import momentumImg from "./assets/images/momentum.png";
 import taskflowImg from "./assets/images/taskflow.png";
+import aboutImg from "./assets/images/about.jpg";
+
 
 
 function App() {
@@ -97,22 +99,45 @@ function App() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="py-24 px-6 bg-black">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">
-            About <span className="text-cyan-400">Me</span>
-          </h2>
+     {/* ABOUT */}
+<section id="about" className="py-24 px-6 bg-black">
+  <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 items-start">
 
-          <p className="text-gray-300 text-lg leading-relaxed">
-           I’m a front-end and back-end developer focused on building clean, responsive, and scalable digital products.
-  I work with React on the frontend and Node.js on the backend to create full-featured applications.
-  I also help businesses improve visibility and performance through SEO optimization.
-  My approach combines clean code, clarity, and user-first thinking.
-             My journey into tech is rooted in discipline, consistency, and continuous learning. 
-          </p>
-        </div>
-      </section>
+    {/* IMAGE – LEFT */}
+    <div className="flex justify-center md:justify-start">
+      <img
+        src={aboutImg}
+        alt="Joy Kiama"
+        className="w-64 h-64 object-cover rounded-2xl border border-gray-700
+                   hover:border-cyan-400 transition duration-300"
+      />
+    </div>
+
+    {/* TEXT – RIGHT */}
+    <div className="space-y-5">
+      <h2 className="text-4xl font-bold">
+        About <span className="text-cyan-400">Me</span>
+      </h2>
+
+      <p className="text-gray-300 text-lg leading-relaxed">
+        I’m a front-end and back-end developer focused on building clean,
+        responsive, and scalable digital products using modern web technologies.
+      </p>
+
+      <p className="text-gray-300 text-lg leading-relaxed">
+        I work with React on the frontend and Node.js on the backend to create
+        full-featured applications that are practical, maintainable, and user-focused.
+      </p>
+
+      <p className="text-gray-300 text-lg leading-relaxed">
+        I also help businesses improve visibility and performance through SEO optimization,
+        combining clean code with clarity and long-term growth in mind.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       {/* PROJECTS */}
       <section id="projects" className="py-24 px-6 bg-gray-900">
@@ -287,14 +312,18 @@ function ProjectCard({ title, description, tech, github, live, image, noFade }) 
                   transition transform duration-300 ease-out
                   hover:-translate-y-2 hover:border-cyan-400 hover:shadow-xl`}
     >
-      {/* IMAGE */}
-      {image && (
+      {/* IMAGE OR PLACEHOLDER */}
+      {image ? (
         <img
           src={image}
           alt={title}
           className="w-full h-40 object-cover"
           loading="lazy"
         />
+      ) : (
+        <div className="w-full h-40 bg-gray-900 flex items-center justify-center text-gray-500 text-sm">
+          Project Preview
+        </div>
       )}
 
       {/* CONTENT */}
