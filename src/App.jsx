@@ -66,7 +66,7 @@ function App() {
 
         <div className="max-w-3xl pt-20">
           <p className="text-cyan-400 uppercase tracking-widest text-sm mb-4">
-            Front-End Developer
+            Front-End & Back-End Developer · SEO Specialist
           </p>
 
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
@@ -74,7 +74,7 @@ function App() {
           </h1>
 
           <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            I build clean, modern, and user-focused web interfaces using React and modern frontend tools.
+            I build clean, scalable, and user-focused web applications using modern front-end and back-end technologies, with SEO baked in from the start.
           </p>
 
           <div className="flex justify-center gap-4">
@@ -105,8 +105,10 @@ function App() {
           </h2>
 
           <p className="text-gray-300 text-lg leading-relaxed">
-            I’m a front-end developer with a strong focus on building clean,
-            responsive, and accessible web interfaces. I enjoy turning ideas into functional digital products using React and modern front-end tools.
+           I’m a front-end and back-end developer focused on building clean, responsive, and scalable digital products.
+  I work with React on the frontend and Node.js on the backend to create full-featured applications.
+  I also help businesses improve visibility and performance through SEO optimization.
+  My approach combines clean code, clarity, and user-first thinking.
              My journey into tech is rooted in discipline, consistency, and continuous learning. 
           </p>
         </div>
@@ -164,9 +166,19 @@ function App() {
           </h2>
 
           <div className="grid gap-10 md:grid-cols-3">
-            <SkillBox title="Frontend" items={["HTML5", "CSS3", "JavaScript", "React", "Tailwind"]} />
-            <SkillBox title="Tools" items={["Git & GitHub", "Vite", "Figma", "VS Code"]} />
-            <SkillBox title="Soft Skills" items={["Problem Solving", "Communication", "Teamwork"]} />
+            <SkillBox title="Frontend" items={["HTML5", "CSS3", "JavaScript", "React",  "TypeScript", "Tailwind"]} />
+            <SkillBox
+title="Backend"
+    items={["Node.js", "Express", "REST APIs", "Authentication"]}
+  />
+  <SkillBox
+    title="SEO & Optimization"
+    items={["Technical SEO", "On-Page SEO", "Performance Optimization", "Keyword Strategy"]}
+  />
+            <SkillBox
+    title="Tools"
+    items={["Git & GitHub", "Vite", "Postman", "Figma", "VS Code"]}
+  />
           </div>
         </div>
       </section>
@@ -177,11 +189,15 @@ function App() {
           Services I <span className="text-cyan-400">Offer</span>
         </h2>
 
-        <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-3">
-          <ServiceCard title="Front-End Development" />
-          <ServiceCard title="UI Implementation" />
-          <ServiceCard title="Website Fixes & Improvements" />
-        </div>
+      <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-4">
+
+  <ServiceCard title="Front-End Development" />
+  <ServiceCard title="Back-End Development" />
+  <ServiceCard title="UI Implementation" />
+  <ServiceCard title="SEO Optimization & Performance" />
+
+</div>
+
       </section>
 
       {/* CONTACT */}
