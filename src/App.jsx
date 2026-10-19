@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import momentumImg from "./assets/images/momentum.png";
 import taskflowImg from "./assets/images/taskflow.png";
+import savannahImg from "./assets/images/savannah.png";
+import coredeskImg from "./assets/images/coredesk.png";
 import aboutImg from "./assets/images/about.jpg";
-
 
 
 function App() {
@@ -139,49 +140,68 @@ function App() {
 </section>
 
 
+     
       {/* PROJECTS */}
       <section id="projects" className="py-24 px-6 bg-gray-900">
         <h2 className="text-4xl font-bold text-center mb-14">
           Selected <span className="text-cyan-400">Projects</span>
         </h2>
 
-        <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-3">
+        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-  <ProjectCard
-    title="Momentum Tracker App"
-    description="A productivity app focused on consistency and daily progress."
-    tech="React • Tailwind • API"
-    github="https://github.com/fittechjoy/momentum-tracker"
-    live="https://momentumtracker.vercel.app/"
-    image={momentumImg}
-  />
+          <ProjectCard
+            title="Savannah Fitness SaaS"
+            description="A gym management platform designed to support membership management, subscriptions, and day-to-day fitness business operations."
+            tech="React • Node.js • Express • PostgreSQL"
+            github="https://github.com/fittechjoy/savannah-saas"
+            live="https://savannah-fitness.vercel.app/"
+            image={savannahImg}
+          />
 
-  <ProjectCard
-    title="GitHub User Search"
-    description="Search GitHub users using the GitHub API with a clean UI."
-    tech="React • API"
-    github="https://github.com/fittechjoy/github-user-search"
-  />
+          <ProjectCard
+            title="CoreDesk Business Solutions"
+            description="A professional website for back-office and administrative support services, built to present business services through a clean, responsive interface."
+            tech="React • Tailwind CSS • Responsive Design"
+            github="https://github.com/fittechjoy/coredesk"
+            live="https://coredesk-blond.vercel.app/"
+            image={coredeskImg}
+          />
 
-  <ProjectCard
-    title="EHR System"
-    description="A team-based healthcare system UI for managing patient records."
-    tech="React • Team Project"
-    noFade
-  />
+          <ProjectCard
+            title="Momentum Tracker App"
+            description="A productivity app focused on consistency, daily progress, and building sustainable momentum."
+            tech="React • Tailwind CSS • API"
+            github="https://github.com/fittechjoy/momentum-tracker"
+            live="https://momentum-tracker-git-main-joys-projects-e57c4def.vercel.app/"
+            image={momentumImg}
+          />
 
-  <ProjectCard
-    title="TaskFlow"
-    description="A clean, minimal task manager focused on productivity and momentum. Users can add, complete, delete, and filter tasks with data persisted in localStorage."
-    tech="React • Tailwind CSS • Local Storage"
-    github="https://github.com/fittechjoy/taskflow"
-    live="https://taskflow-gamma-nine.vercel.app/"
-    image={taskflowImg}
-  />
+          <ProjectCard
+            title="TaskFlow"
+            description="A minimal task manager that lets users add, complete, delete, and filter tasks, with data saved in localStorage."
+            tech="React • Tailwind CSS • Local Storage"
+            github="https://github.com/fittechjoy/taskflow"
+            live="https://taskflow-gamma-nine.vercel.app/"
+            image={taskflowImg}
+          />
 
-</div>
+          <ProjectCard
+            title="GitHub User Search"
+            description="A web application that searches GitHub users through the GitHub API and displays user information in a clean interface."
+            tech="React • GitHub API"
+            github="https://github.com/fittechjoy/github-user-search"
+          />
 
+          <ProjectCard
+            title="EHR System"
+            description="A collaborative healthcare system interface designed to support the management of patient records."
+            tech="React • Team Project"
+            noFade
+          />
+
+        </div>
       </section>
+
 
       {/* SKILLS */}
       <section id="skills" className="py-24 px-6 bg-black">
